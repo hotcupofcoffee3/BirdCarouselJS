@@ -1,0 +1,157 @@
+/* Overall Settings */
+*{margin: 0 auto; text-align: center; font-family: "Palatino"; max-width: 1300px;}
+html{background-color:rgba(58,39,22,0.8);}
+
+/*** Bird Carousel CSS ***/
+
+	/*** Clearfix Solution for Floats ***/
+
+		#birdPages:after{
+			content: "";
+			visibility: hidden;
+			display: block;
+			height: 0px;
+			clear: both;
+		}
+
+	#birdCarousel{
+		min-height: initial;
+		position: relative;
+		margin-bottom: -4px;
+	}
+
+	#birds{
+		position: relative;
+	}
+		#birdPics{
+			position: relative;
+			width: 100%;
+		}
+			#birdPic{
+				position: relative;
+				width: 100%;
+			}
+				#birdPic img{
+					width: 100%;
+					opacity: 0;
+					top: 0;
+					left: 0;
+					position: absolute;
+					transition: 0.5s;
+					border-radius: 5px;
+				}
+				#prevBird,
+				#nextBird{
+					height: 100%;
+					width: 10%;
+					position: absolute;
+					top: 0;
+					color: black;
+				}
+				#prevBird:hover,
+				#nextBird:hover{
+					cursor: pointer;
+				}
+				#prevBird{left: 0;}
+				#nextBird{right: 0;}
+
+					#prevBird p,
+					#nextBird p{
+						margin: auto;
+						position: absolute;
+						width: 100%;
+						top: 0;
+						bottom: 0;
+						height: 20px;
+						font-size: 20px;
+					}
+				#birdName,
+				#birdPages{
+					font-size: 15px;
+					width: 240px;
+					padding: 2.5px;
+					position: absolute;
+					left: 0;
+					right: 0;
+					margin-bottom: 4px;
+					background-color: rgba(10,0,0,.5);
+				}
+				#birdName{
+					bottom: 20px;
+					color: white;
+					border-radius: 5px 5px 0px 0px;
+				}
+				#birdPages{
+					bottom: 0;
+					border-radius: 0px 0px 5px 5px;
+
+				}
+					#birdPages div{
+						width: 10px;
+						height: 10px;
+						margin: 2.5px 5px;
+						border-radius: 50%;
+						float: left;
+					}
+						#birdPages div:hover{
+							cursor: pointer;
+						}
+					#birdPages div.unselectedBirdPage{
+						background-color: rgba(204,204,204,.3);
+					}
+					#birdPages div.currBirdPg{
+						background-color: rgba(204,204,204,1);
+					}
+
+	@media screen and (min-width: 500px){
+
+		#birdName,
+		#birdPages{
+			width: 360px;
+			font-size: 20px;
+			padding: 5px;
+		}
+		#birdName{
+			bottom: 30px;
+		}
+			#birdPages div{
+				width: 10px;
+				height: 10px;
+				margin: 5px 10px;
+			}
+			#prevBird p,
+			#nextBird p{
+				height: 30px;
+				font-size: 30px;
+			}
+	}
+	@media screen and (min-width: 800px){
+		#birdCarousel{
+			width: 100%;
+		}
+
+		#birdName,
+		#birdPages{
+			width: 480px;
+			font-size: 25px;
+			padding: 7.5px 10px;
+		}
+		#birdName{
+			bottom: 55px;
+		}
+		#birdPages div{
+			width: 20px;
+			height: 20px;
+			margin: 10px;
+		}
+		#prevBird p,
+		#nextBird p{
+			height: 40px;
+			font-size: 40px;
+		}
+	}
+	@media screen and (min-width: 1300px){
+		#birdCarousel{
+			width: 1300px;
+		}
+	}
